@@ -20,6 +20,7 @@ struct ContentView: View {
                 .fontWeight(.heavy) //changed the boldness
                 .foregroundStyle(.red) //changed the color
         }
+        // New stuff here 
         .padding()
         
     }
