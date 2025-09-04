@@ -3,7 +3,7 @@
 //  YouAreAwesome
 //
 //  Created by Dola Fakeye on 8/25/25.
-
+// week 1 work (some week 2 added due to Git issues)
 
 import SwiftUI
 
