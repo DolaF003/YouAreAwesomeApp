@@ -3,7 +3,7 @@
 //  YouAreAwesome
 //
 //  Created by Dola Fakeye on 8/25/25.
-//  Week 1 work
+
 
 import SwiftUI
 
@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var message = ""
     @State private var imageName = ""
     @State private var imageNumber = 0
+    @State private var messageNum = 0
     var body: some View {
         
         VStack {
@@ -27,18 +28,30 @@ struct ContentView: View {
                 .font(.largeTitle) //changed the size
                 .fontWeight(.heavy) //changed the boldness
                 .foregroundStyle(.red)
+                .multilineTextAlignment(.center)
             
             Spacer()
             
             Button("Show Message") {
-                let message1 = "You are Awesome!"
-                let message2 = "You are Great!"
+                let messages = ["You Are So Dope!",
+                                "There is NONE like YOU!",
+                                "You Are One of One!",
+                                "You are Doing Amazing!",
+                                "Who Betta Than?? Nobody!",
+                                "Gorgeous!"]
                 
-                message = (message == message1 ? message2 :  message1)
-
+                
+                message = messages[messageNum]
+                messageNum += 1
+                
+                if messageNum == messages.count {
+                    messageNum = 0
+                }
+                
+                
                 //TODO: - Update the imageName variable -
                 imageName = "image\(imageNumber)"
-                  
+                
                 imageNumber += 1
                 
                 if imageNumber > 9 {
